@@ -1,0 +1,528 @@
+/////////////////////////////////////////////////////////
+// PRISMA SCHEMA : IT STUDY PLAN SYSTEM (FULL + FIXED)
+//
+// ระบบตรวจสอบแผนการเรียน หลักสูตรเทคโนโลยีสารสนเทศ
+// - มีระบบ Login / Register
+// - มีหลักสูตรเดียวเป็นแกน (Curriculum)
+// - รองรับแผนการเรียนรายเทอม
+// - รองรับ Track (สหกิจ / ฝึกงาน)
+// - รองรับการตรวจสอบกฎ (Validation)
+// - ทุก relation มี opposite ครบ (Prisma ผ่านแน่นอน)
+/////////////////////////////////////////////////////////
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/////////////////////////////////////////////////////////
+// ENUMS : ค่าคงที่ที่ใช้ร่วมกันทั้งระบบ
+/////////////////////////////////////////////////////////
+
+/// สถานะการลงวิชา
+enum EntryStatus {
+  PLANNED // วางแผนไว้
+  ENROLLED // ลงทะเบียนแล้ว
+  PASSED // ผ่าน
+  FAILED // ไม่ผ่าน
+  DROPPED // ถอน
+}
+
+/// ความรุนแรงของผลการตรวจ
+enum RuleSeverity {
+  ERROR
+  WARNING
+  INFO
+}
+
+/// ภาษาที่ใช้เขียนกฎ
+enum RuleLanguage {
+  SPARQL
+  NOTE
+}
+
+/////////////////////////////////////////////////////////
+// 1) AUTHENTICATION
+/////////////////////////////////////////////////////////
+
+/// บัญชีผู้ใช้ (ใช้เฉพาะเรื่องความปลอดภัย)
+model UserAccount {
+  id             Int             @id @default(autoincrement())
+  username       String          @unique
+  passwordHash   String
+  studentProfile StudentProfile?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+/////////////////////////////////////////////////////////
+// 2) STUDENT PROFILE
+/////////////////////////////////////////////////////////
+
+/// ข้อมูลนักศึกษาเชิงวิชาการ
+model StudentProfile {
+  id Int @id @default(autoincrement())
+
+  userId Int         @unique
+  user   UserAccount @relation(fields: [userId], references: [id])
+
+  firstName String
+  lastName  String
+
+  studyPlans  StudyPlan[]
+  transcripts Transcript[]
+
+  // ถ้าจะใช้รูป:
+  profileImageFileId Int?
+  profileImageUrl    String?
+  profileImageFile   MediaFile? @relation(fields: [profileImageFileId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+/// ไฟล์มีเดีย (เก็บ binary ในฐานข้อมูล) เช่น รูปโปรไฟล์
+model MediaFile {
+  id        Int     @id @default(autoincrement())
+  mimeType  String
+  fileName  String?
+  sizeBytes Int
+  data      Bytes
+
+  // reverse relation (optional)
+  studentProfiles StudentProfile[]
+
+  createdAt DateTime @default(now())
+}
+
+/////////////////////////////////////////////////////////
+// 3) CURRICULUM/////////////////////////////////////////////////////////
+// 3) CURRICULUM (หลักสูตร)
+/////////////////////////////////////////////////////////
+
+/// หลักสูตร (ในระบบนี้ใช้หลักสูตรเดียวเป็นหลัก)
+model Curriculum {
+  id              Int    @id @default(autoincrement())
+  curriculumName  String @unique // ชื่อหลักสูตร
+  totalMinCredits Int // หน่วยกิตรวมขั้นต่ำ (เช่น 126)
+
+  courses            Course[] // รายวิชาทั้งหมดในหลักสูตร
+  courseGroups       CourseGroup[] // กลุ่ม/หมวดวิชา
+  creditRequirements CreditRequirement[]
+
+  studyPlans StudyPlan[] // แผนการเรียนที่อิงหลักสูตรนี้
+
+  // แผนการเรียนมาตรฐาน (COOP/ฝึกงาน) ที่เป็นส่วนหนึ่งของหลักสูตร
+  tracks Track[]
+}
+
+/////////////////////////////////////////////////////////
+// 4) COURSE / COURSE GROUP
+/////////////////////////////////////////////////////////
+
+/// รายวิชา
+model Course {
+  id           Int     @id @default(autoincrement())
+  courseCode   String  @unique
+  courseNameTH String
+  courseNameEN String?
+  credits      Int
+  creditDetail String?
+
+  curriculumId Int
+  curriculum   Curriculum @relation(fields: [curriculumId], references: [id], onDelete: Cascade)
+
+  groupId Int?
+  group   CourseGroup? @relation(fields: [groupId], references: [id])
+
+  prerequisites CoursePrerequisite[] @relation("CoursePrereq")
+  prereqFor     CoursePrerequisite[] @relation("PrereqCourse")
+
+  usedInPlans PlanEntry[]
+
+  validationResults ValidationResult[]
+
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  // โครงแผนการเรียนมาตรฐานที่อ้างอิงวิชานี้ (TrackPlanCourse)
+  trackPlanCourses TrackPlanCourse[] @relation("TrackPlanCourseCourse")
+
+  transcripts Transcript[]
+}
+
+/// กลุ่ม/หมวดวิชา (GE / Major ฯลฯ)
+model CourseGroup {
+  id          Int     @id @default(autoincrement())
+  groupCode   String  @unique // โค้ดกลุ่ม
+  groupName   String // ชื่อกลุ่ม
+  /// ชื่อกลุ่มภาษาอังกฤษ (ถ้ามี)
+  groupNameEN String?
+
+  curriculumId Int
+  curriculum   Curriculum @relation(fields: [curriculumId], references: [id], onDelete: Cascade)
+
+  // โครงสร้างกลุ่มย่อย
+  parentGroupId Int?
+  parentGroup   CourseGroup?  @relation("SubGroup", fields: [parentGroupId], references: [id])
+  subGroups     CourseGroup[] @relation("SubGroup")
+
+  courses            Course[] // วิชาที่อยู่ในกลุ่มนี้
+  creditRequirements CreditRequirement[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+/// ความสัมพันธ์ prerequisite ระหว่างวิชา
+model CoursePrerequisite {
+  id       Int    @id @default(autoincrement())
+  courseId Int
+  course   Course @relation("CoursePrereq", fields: [courseId], references: [id], onDelete: Cascade)
+
+  prereqCourseId Int
+  prereqCourse   Course @relation("PrereqCourse", fields: [prereqCourseId], references: [id], onDelete: Cascade)
+
+  @@unique([courseId, prereqCourseId])
+}
+
+/////////////////////////////////////////////////////////
+// 5) CREDIT / MANDATORY REQUIREMENT
+/////////////////////////////////////////////////////////
+
+/// เกณฑ์หน่วยกิตขั้นต่ำต่อกลุ่ม
+model CreditRequirement {
+  id         Int @id @default(autoincrement())
+  minCredits Int // หน่วยกิตขั้นต่ำ
+
+  curriculumId Int
+  curriculum   Curriculum @relation(fields: [curriculumId], references: [id])
+
+  courseGroupId Int
+  courseGroup   CourseGroup @relation(fields: [courseGroupId], references: [id])
+}
+
+/// ชุดวิชาบังคับ
+
+/////////////////////////////////////////////////////////
+// 7) STUDY PLAN / TERM / PLAN ENTRY
+/////////////////////////////////////////////////////////
+
+/// แผนการเรียนของนักศึกษา
+model StudyPlan {
+  id     Int    @id @default(autoincrement())
+  planId String  // รหัสแผน (map ontology)
+
+  studentId Int
+  student   StudentProfile @relation(fields: [studentId], references: [id])
+
+  curriculumId Int
+  curriculum   Curriculum @relation(fields: [curriculumId], references: [id])
+
+  // ---------------------------------------------------
+  // แผนการเรียนมาตรฐานของหลักสูตร (COOP / JOB_TRAINING)
+  // - ถ้ายังไม่เลือกแผน อาจเป็น null ได้
+  // - ใช้เพื่อสร้าง Term/PlanEntry อัตโนมัติจาก "โครงแผนแนะนำ"
+  // ---------------------------------------------------
+  trackId Int?
+  track   Track? @relation(fields: [trackId], references: [id])
+
+  terms          Term[]
+  validationRuns ValidationRun[] // ประวัติการตรวจแผน
+}
+
+/// ภาคการศึกษา
+model Term {
+  id       Int      @id @default(autoincrement())
+  termYear Int
+  termNo   Int
+  /// ประเภทเทอม (ปกติ/ฤดูร้อน)
+  termType TermType @default(SEMESTER)
+
+  studyPlanId Int
+  studyPlan   StudyPlan @relation(fields: [studyPlanId], references: [id], onDelete: Cascade)
+
+  entries PlanEntry[]
+
+  validationResults ValidationResult[]
+
+  @@unique([studyPlanId, termYear, termNo])
+}
+
+/// รายการลงวิชาในแต่ละเทอม
+model PlanEntry {
+  id Int @id @default(autoincrement())
+
+  /////////////////////////////////////////////////////////
+  // PlanEntry = รายการ "วิชาจริง" ที่นักศึกษาเลือกลงในเทอมนั้น
+  //
+  // ✅ ในเวอร์ชันนี้เรา "ไม่ใช้ placeholder แล้ว"
+  // เพราะตี้ต้องการให้:
+  // - นักศึกษาเลือกวิชาเองจาก "หมวด/กลุ่มวิชา" ที่ระบบกำหนด
+  //
+  // ดังนั้น PlanEntry จะต้องอ้างอิง Course แบบบังคับ (required)
+  /////////////////////////////////////////////////////////
+
+  termId Int
+  term   Term @relation(fields: [termId], references: [id], onDelete: Cascade)
+
+  /// อ้างอิงรายวิชาจริงในหลักสูตร (required)
+  courseId Int
+  course   Course @relation(fields: [courseId], references: [id])
+
+  /// สถานะการลง (วางแผน/ลงแล้ว/ผ่าน/ไม่ผ่าน/ถอน)
+  status EntryStatus @default(PLANNED)
+
+  /// เกรด (optional) - ใช้ตอนคำนวณ GPA/ผ่านรายวิชา (ถ้าจะทำในอนาคต)
+  grade String?
+
+  /// หน่วยกิตที่ "ได้จริง" (optional)
+  /// - ถ้ายังไม่ผ่านจะเป็น null
+  /// - ถ้าผ่านแล้วสามารถ set เป็นจำนวนเครดิตที่ได้
+  earnedCredits Int?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // ไม่ตั้ง unique(termId, courseId) เพื่อให้รองรับกรณีลงซ้ำ/แก้แผน
+
+  @@index([termId])
+  @@index([courseId])
+}
+
+/////////////////////////////////////////////////////////
+// 7.5) PLAN TEMPLATE (แม่แบบแผนการเรียนจากเอกสารหลักสูตร)
+/////////////////////////////////////////////////////////
+
+/// แม่แบบแผนการเรียน (Template) ใช้เก็บ "แผนแนะนำ" ตามเอกสารหลักสูตร
+/// - ไม่ผูกกับนักศึกษาคนใดคนหนึ่ง
+/// - 1 หลักสูตรอาจมีหลาย template (เช่น แผนสหกิจ / แผนฝึกประสบการณ์)
+
+/// เทอมในแม่แบบ
+
+/// รายการรายวิชาในเทอมของแม่แบบ
+
+/////////////////////////////////////////////////////////
+// 8) VALIDATION (การตรวจสอบแผน)
+/////////////////////////////////////////////////////////
+
+/// กฎการตรวจสอบ
+model Track {
+  id Int @id @default(autoincrement())
+
+  // code ใช้อ้างอิงจากระบบ/seed เช่น "COOP", "JOB_TRAINING"
+  code String @unique
+
+  // ชื่อแผนการเรียน (ภาษาไทย/อังกฤษ)
+  nameTH String
+  nameEN String?
+
+  // อธิบายแผนเพิ่มเติม (optional)
+  descriptionTH String?
+  descriptionEN String?
+
+  curriculumId Int
+  curriculum   Curriculum @relation(fields: [curriculumId], references: [id], onDelete: Cascade)
+
+  // ---------------------------------------------------
+  // โครงแผนแนะนำ (ปี/เทอม/วิชา) ของแผนนี้
+  // Track 1 อัน มีหลายเทอม และในแต่ละเทอมมีหลายรายการวิชา/placeholder
+  // ---------------------------------------------------
+  planTerms TrackPlanTerm[]
+
+  // แผนจริงของนักศึกษาที่เลือก Track นี้
+  studyPlans StudyPlan[]
+}
+
+enum TermType {
+  SEMESTER
+  SUMMER
+}
+
+model TrackPlanTerm {
+  id Int @id @default(autoincrement())
+  /////////////////////////////////////////////////////////
+  // TrackPlanTerm = "โครงเทอมมาตรฐาน" ของแผนการเรียน (Track)
+  //
+  // ตัวอย่าง:
+  // - แผนสหกิจ: ปี 1 เทอม 1, ปี 1 เทอม 2, ... ปี 3 เทอม 2
+  // - แผนฝึกประสบการณ์: มีภาคฤดูร้อนเพิ่ม (termType = SUMMER)
+  //
+  // หมายเหตุ:
+  // - TrackPlanTerm เป็น "แผนแนะนำ" ของหลักสูตร
+  // - ไม่ใช่ข้อมูลการลงจริงของนักศึกษา (อันนั้นอยู่ที่ Term/PlanEntry)
+  /////////////////////////////////////////////////////////
+
+  trackId Int
+  track   Track @relation(fields: [trackId], references: [id], onDelete: Cascade)
+
+  /// ปีการศึกษา (1,2,3,4)
+  year Int
+
+  /// เทอมปกติ: 1/2, ภาคฤดูร้อน: ใช้ 3 หรือ termType=SUMMER
+  termNo   Int
+  termType TermType @default(SEMESTER)
+
+  /// หน่วยกิตรวมที่แนะนำในเทอมนี้ (optional: บางตารางระบุ)
+  suggestedTotalCredits Int?
+
+  /// ลำดับสำหรับเรียง (กัน sort เพี้ยน)
+  sortOrder Int
+
+  /// รายวิชา "บังคับ/แนะนำ" ในเทอมนี้ (เป็นวิชาจริง)
+  courseEntries TrackPlanCourse[]
+
+  /// ช่องให้เลือกจากหมวด/กลุ่มวิชา (ทางเลือก A)
+  /// เช่น "เลือกกลุ่มภาษา 1 วิชา", "วิชาเลือกเอก 1 วิชา"
+  slots TrackPlanSlot[]
+}
+
+model TrackPlanCourse {
+  id             Int           @id @default(autoincrement())
+  termTemplateId Int
+  termTemplate   TrackPlanTerm @relation(fields: [termTemplateId], references: [id], onDelete: Cascade)
+
+  /// รายวิชาจริง (required)
+  courseId Int
+  course   Course @relation("TrackPlanCourseCourse", fields: [courseId], references: [id])
+
+  /// ลำดับสำหรับเรียงในเทอม
+  sortOrder Int
+
+  /// หมายเหตุ (optional) เช่น "บังคับ", "แนะนำ"
+  noteTH String?
+  noteEN String?
+
+  @@index([termTemplateId])
+  @@index([courseId])
+}
+
+model TrackPlanSlot {
+  id             Int           @id @default(autoincrement())
+  termTemplateId Int
+  termTemplate   TrackPlanTerm @relation(fields: [termTemplateId], references: [id], onDelete: Cascade)
+
+  /////////////////////////////////////////////////////////
+  // TrackPlanSlot = ช่อง "เลือกวิชาเอง" จากหมวด/กลุ่มวิชา
+  // ใช้แทน placeholder เดิมทั้งหมด
+  //
+  // ตัวอย่าง:
+  // - slotCode: "GEN_LANG_1"
+  // - titleTH: "เลือกหมวดภาษา (ศึกษาทั่วไป) 1 วิชา"
+  // - groupCode: "GEN_LANG"
+  // - requiredCredits: 3
+  /////////////////////////////////////////////////////////
+
+  /// code ภายในระบบ (ไม่ซ้ำในเทอมนั้น)
+  slotCode String
+
+  /// ชื่อแสดงใน UI (ไทย/อังกฤษ)
+  titleTH String
+  titleEN String?
+
+  /// อ้างอิงกลุ่ม/หมวดวิชา เพื่อให้ UI filter รายวิชา
+  groupCode String
+
+  /// จำนวนหน่วยกิตที่ต้องเลือกในช่องนี้ (ถ้าไม่มีให้เป็น null)
+  requiredCredits Int?
+
+  /// จำนวน "วิชา" ที่ต้องเลือก (ถ้าอยากกำหนดเป็นจำนวนวิชาแทนเครดิต)
+  requiredCourses Int?
+
+  noteTH String?
+  noteEN String?
+
+  sortOrder Int
+
+  @@unique([termTemplateId, slotCode])
+  @@index([termTemplateId])
+  @@index([groupCode])
+}
+
+model ValidationRule {
+  id       Int          @id @default(autoincrement())
+  ruleCode String       @unique // รหัสกฎ (A1, B2)
+  ruleText String // คำอธิบายกฎ
+  severity RuleSeverity
+  language RuleLanguage
+
+  results ValidationResult[]
+}
+
+/// การรันตรวจแผน 1 ครั้ง
+model ValidationRun {
+  id          Int       @id @default(autoincrement())
+  studyPlanId Int
+  studyPlan   StudyPlan @relation(fields: [studyPlanId], references: [id], onDelete: Cascade)
+
+  startedAt  DateTime  @default(now())
+  finishedAt DateTime?
+
+  results ValidationResult[]
+}
+
+/// ผลการตรวจแต่ละข้อ
+model ValidationResult {
+  id    Int           @id @default(autoincrement())
+  runId Int
+  run   ValidationRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+
+  ruleId Int
+  rule   ValidationRule @relation(fields: [ruleId], references: [id], onDelete: Cascade)
+
+  message  String
+  severity RuleSeverity
+
+  termId Int?
+  term   Term? @relation(fields: [termId], references: [id], onDelete: SetNull)
+
+  courseId Int?
+  course   Course? @relation(fields: [courseId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+
+  @@index([runId])
+  @@index([ruleId])
+  @@index([termId])
+  @@index([courseId])
+}
+
+/////////////////////////////////////////////////////////
+// TRANSCRIPT : ผลการเรียนจริงของนักศึกษา (เกรดจริง)
+/////////////////////////////////////////////////////////
+
+model Transcript {
+  id Int @id @default(autoincrement())
+
+  /// อ้างอิงนักศึกษาเจ้าของผลการเรียน
+  studentId Int
+  student   StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  /// อ้างอิงรายวิชาที่เรียน
+  courseId Int
+  course   Course @relation(fields: [courseId], references: [id])
+
+  /// ปีการศึกษาในรูปแบบชั้นปี (1-4)
+  yearNo Int
+
+  /// เทอม (1,2) และสามารถใช้ 3 แทนภาคฤดูร้อนได้
+  termNo Int
+
+  /// เกรด (Grade Point) แบบตัวเลข
+  /// - เก็บเป็น Float ตาม mapping: A=4.0, B+=3.5, ... , F=0.0
+  /// - ถ้ายัง "วางแผน" และยังไม่ใส่เกรด ให้เป็น null
+  grade Float?
+
+  /// หน่วยกิตที่ใช้คำนวณ (เก็บ snapshot เพื่อกันกรณีเปลี่ยนหลักสูตรในอนาคต)
+  credits Int
+
+  createdAt DateTime @default(now())
+
+  @@unique([studentId, courseId, yearNo, termNo])
+  @@index([studentId])
+  @@index([courseId])
+}

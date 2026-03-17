@@ -1,0 +1,1234 @@
+[
+  {
+    "courseCode": "00-10-001",
+    "courseNameTH": "การพัฒนาคุณภาพชีวิตและสังคม",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-10-002",
+    "courseNameTH": "การเมืองการปกครองของไทย",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-10-003",
+    "courseNameTH": "สังคมกับเศรษฐกิจ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-10-004",
+    "courseNameTH": "สังคมกับกฎหมาย",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-10-005",
+    "courseNameTH": "ชุมชนสังคมวัฒนธรรมและสิ่งแวดล้อม",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-11-001",
+    "courseNameTH": "สังคมกับเศรษฐกิจ",
+    "courseNameEN": "Society and Economics",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-11-002",
+    "courseNameTH": "สังคมกับกฎหมาย",
+    "courseNameEN": "Society and Law",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-11-003",
+    "courseNameTH": "สังคมวิทยาและมานุษยวิทยาเบื้องต้น",
+    "courseNameEN": "Introduction to Sociology and Anthropology",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-11-004",
+    "courseNameTH": "ความเป็นพลเมือง",
+    "courseNameEN": "Citizenship",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-11-005",
+    "courseNameTH": "การเมืองการปกครองของไทย",
+    "courseNameEN": "Thai Politics and Government",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-12-001",
+    "courseNameTH": "การพัฒนาบุคลิกภาพ",
+    "courseNameEN": "Personality Development",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-12-002",
+    "courseNameTH": "ไทยศึกษา",
+    "courseNameEN": "Thai Studies",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-12-003",
+    "courseNameTH": "เทคโนโลยีสารสนเทศเพื่อการค้นคว้า",
+    "courseNameEN": "Information Techn ology and Searching Skills",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-12-004",
+    "courseNameTH": "ศาสนาเพื่อสันติสุข",
+    "courseNameEN": "Religions for Peace",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-12-005",
+    "courseNameTH": "จิตวิทยาในชีวิตประจาวัน",
+    "courseNameEN": "Psychology in Daily Life",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-12-006",
+    "courseNameTH": "จิตวิทยาสังคมประยุกต์",
+    "courseNameEN": "Applied Social Psychology",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-12-007",
+    "courseNameTH": "จิตวิทยาเพื่อชีวิตสมัยใหม่",
+    "courseNameEN": "Psychology for Modern Life",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-12-008",
+    "courseNameTH": "มนุษย์กับทักษะการคิด",
+    "courseNameEN": "Humans and Thinking Skills",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-12-009",
+    "courseNameTH": "วรรณคดีไทยนิยม",
+    "courseNameEN": "Thai Literature Appreciation",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-12-010",
+    "courseNameTH": "วรรณกรรมไทยร่วมสมัยกับสังคมไทย",
+    "courseNameEN": "Contemporary Thai Literature and Thai Society",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-12-011",
+    "courseNameTH": "นันทนาการในชีวิตประจาวัน",
+    "courseNameEN": "Recreation in Daily Life",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-12-200",
+    "courseNameTH": "ไทยศึกษา",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-20-001",
+    "courseNameTH": "การพัฒนาบุคลิกภาพ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-20-002",
+    "courseNameTH": "สารสนเทศเพื่อการศึกษาค้นคว้า",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-20-004",
+    "courseNameTH": "ไทยศึกษา",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-20-005",
+    "courseNameTH": "ศาสนาเพื่อสันติสุข",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-20-006",
+    "courseNameTH": "การจัดการความรู้",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-20-007",
+    "courseNameTH": "นันทนาการในชีวิตประจาวัน",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-21-001",
+    "courseNameTH": "ภาษาไทยเพื่อการสื่อสาร",
+    "courseNameEN": "Thai for Communication",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-21-002",
+    "courseNameTH": "วาทศิลป์และเทคนิคการนาเสนอ",
+    "courseNameEN": "Rhetoric and Presentation Techniques",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-21-003",
+    "courseNameTH": "ศิลปะการรับสาร",
+    "courseNameEN": "Art of Receiving Messages",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-21-004",
+    "courseNameTH": "ศิลปะการเขียน",
+    "courseNameEN": "Art of Writing",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-22-001",
+    "courseNameTH": "ภาษาอังกฤษเพื่อทักษะการเรียน",
+    "courseNameEN": "English for Study Skills",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-22-002",
+    "courseNameTH": "ภาษาอังกฤษเพื่อการสื่อสาร",
+    "courseNameEN": "English for Communication",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-22-003",
+    "courseNameTH": "ภาษาอังกฤษเพื่อการนาเสนอ",
+    "courseNameEN": "English for Presentation",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-22-004",
+    "courseNameTH": "ภาษาอังกฤษสำหรับสถานประกอบการ",
+    "courseNameEN": "English for Workplace",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-22-005",
+    "courseNameTH": "ภาษาอังกฤษสำหรับการสอบวัดมาตรฐาน",
+    "courseNameEN": "English for Standardized Tests",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-22-006",
+    "courseNameTH": "ภาษาอังกฤษสำหรับการเดินทาง",
+    "courseNameEN": "English for Travelling",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-22-007",
+    "courseNameTH": "ภาษาอังกฤษเพื่อความบันเทิง",
+    "courseNameEN": "English for Entertainment",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-22-008",
+    "courseNameTH": "ภาษาอังกฤษเพื่อความบันเทิง",
+    "courseNameEN": "English for Entertainment",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-22-009",
+    "courseNameTH": "การอ่านภาษาอังกฤษในชีวิตประจาวัน",
+    "courseNameEN": "English Reading in Daily Life",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-22-010",
+    "courseNameTH": "การเขียนภาษาอังกฤษในชีวิตประจาวัน",
+    "courseNameEN": "English Writing in Daily Life",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-001",
+    "courseNameTH": "ภาษาจีนเพื่อการสื่อสาร",
+    "courseNameEN": "Chinese for Communication",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-002",
+    "courseNameTH": "ภาษาจีนเพื่องานอาชีพ",
+    "courseNameEN": "Chinese for Careers",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-003",
+    "courseNameTH": "ภาษาญี่ปุ่นเพื่อการสื่อสาร",
+    "courseNameEN": "Japanese for Communication",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-004",
+    "courseNameTH": "ภาษาญี่ปุ่นเพื่องานอาชีพ",
+    "courseNameEN": "Japanese for Careers",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-005",
+    "courseNameTH": "ภาษาเกาหลีเพื่อการสื่อสาร",
+    "courseNameEN": "Korean for Communication",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-006",
+    "courseNameTH": "ภาษาเกาหลีเพื่องานอาชีพ",
+    "courseNameEN": "Korean for Careers",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-007",
+    "courseNameTH": "ภาษารัสเซียเพื่อการสื่อสาร",
+    "courseNameEN": "Russian for Communication",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-008",
+    "courseNameTH": "ภาษารัสเซียเพื่องานอาชีพ",
+    "courseNameEN": "Russian for Careers",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-009",
+    "courseNameTH": "ภาษาฝรั่งเศสเพื่อการสื่อสาร",
+    "courseNameEN": "French for Com munication",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-010",
+    "courseNameTH": "ภาษาฝรั่งเศสเพื่องานอาชีพ",
+    "courseNameEN": "French for Careers",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-011",
+    "courseNameTH": "ภาษาเขมรเพื่อการสื่อสาร",
+    "courseNameEN": "Khmer for Communication",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-012",
+    "courseNameTH": "ภาษาเขมรเพื่องานอาชีพ",
+    "courseNameEN": "Khmer for Careers",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-013",
+    "courseNameTH": "ภาษาพม่าเพื่อการสื่อสาร",
+    "courseNameEN": "Burmese for Communication00-22-007",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-014",
+    "courseNameTH": "ภาษาพม่าเพื่องานอาชีพ",
+    "courseNameEN": "Burmese for Careers",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-015",
+    "courseNameTH": "ภาษาเวียดนามเพื่อการสื่อสาร",
+    "courseNameEN": "Vietnamese for Communication",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-016",
+    "courseNameTH": "ภาษาเวียดนามเพื่องานอาชีพ",
+    "courseNameEN": "Vietnamese for Careers",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-017",
+    "courseNameTH": "ภาษาลาวเพื่อการสื่อสาร",
+    "courseNameEN": "Lao for Communication",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-018",
+    "courseNameTH": "ภาษาลาวเพื่องานอาชีพ",
+    "courseNameEN": "Lao for Careers",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-019",
+    "courseNameTH": "ภาษาบาฮาซาเพื่อการสื่อสาร",
+    "courseNameEN": "Bahasa for Communication",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-23-020",
+    "courseNameTH": "ภาษาบาฮาซาเพื่องานอาชีพ",
+    "courseNameEN": "Bahasa for Careers",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-31-001",
+    "courseNameTH": "เทคโนโลยีสารสนเทศในยุคดิจิทัล",
+    "courseNameEN": "Information Technology in Digital Era",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-31-002",
+    "courseNameTH": "คณิตศาสตร์และสถิติในชีวิตประจาวัน",
+    "courseNameEN": "Mathematics and Statistics in Daily Life",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-31-003",
+    "courseNameTH": "ศิลปะการพูดในชีวิตประจาวัน",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-31-004",
+    "courseNameTH": "การฟังและการอ่านเพื่อพัฒนาคุณภาพชีวิต",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-31-005",
+    "courseNameTH": "การเขียนเพื่อการสื่อสาร",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-31-006",
+    "courseNameTH": "วรรณกรรมไทยร่วมสมัยกับสังคมไทย",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-32-001",
+    "courseNameTH": "วิทยาศาสตร์เทคโนโลยีและสิ่งแวดล้อมกับชีวิต",
+    "courseNameEN": "Science, Technol ogy and Environment for Life",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-32-002",
+    "courseNameTH": "คุณค่าของสัตว์เลี้ยง",
+    "courseNameEN": "Pet Value",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-32-003",
+    "courseNameTH": "การแก้ปัญหาด้วยกระบวนการทางวิทยาศาสตร์",
+    "courseNameEN": "Scientific Problem Solving",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-32-004",
+    "courseNameTH": "วิทยาศาสตร์การกีฬาเพื่อการออกกาลังกาย",
+    "courseNameEN": "Sport Sciences for Exercise",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-32-005",
+    "courseNameTH": "การออกกาลังกายเพื่อสุขภาพ",
+    "courseNameEN": "Exercise for Health",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-32-006",
+    "courseNameTH": "ทักษะสัมพันธ์ทางภาษาอังกฤษ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-33-001",
+    "courseNameTH": "ภาษาจีนเพื่อการสื่อสาร",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-33-002",
+    "courseNameTH": "ภาษาญี่ปุ่นเพื่อการสื่อสาร",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-33-004",
+    "courseNameTH": "ภาษาเยอรมันเพื่อการสื่อสาร",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-33-005",
+    "courseNameTH": "ภาษารัสเซียเพื่อการสื่อสาร",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-41-001",
+    "courseNameTH": "การพัฒนาคุณภาพชีวิตและสังคม",
+    "courseNameEN": "Life and Social Skills",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-41-002",
+    "courseNameTH": "มหัศจรรย์แห่งบัว",
+    "courseNameEN": "Amazing Waterlily and Lotus",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-41-003",
+    "courseNameTH": "ธรรมชาติของสรรพสิ่ง",
+    "courseNameEN": "Nature of the Whole",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-41-004",
+    "courseNameTH": "วิถีชุมชน",
+    "courseNameEN": "Comm unity Ways",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-41-005",
+    "courseNameTH": "อาเซียนศึกษา",
+    "courseNameEN": "ASEAN Studies",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-41-006",
+    "courseNameTH": "ภาคตะวันออกศึกษา",
+    "courseNameEN": "Eastern Region Studies",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-41-007",
+    "courseNameTH": "เหตุการณ์โลกร่วมสมัย",
+    "courseNameEN": "Contemporary World Affairs",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-41-008",
+    "courseNameTH": "การคิดเชิงระบบกับการวิเคราะห์ปัญหา",
+    "courseNameEN": "Systems Thinkin g and Problem Analysis",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-41-009",
+    "courseNameTH": "วรรณกรรมไทยกับภาพยนตร์",
+    "courseNameEN": "Thai Literature and Film",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-41-010",
+    "courseNameTH": "วิถีชีวิตในยุคดิจิทัล",
+    "courseNameEN": "Ways of Living in the Digital Era",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-42-001",
+    "courseNameTH": "วิทยาศาสตร์เทคโนโลยีและสิ่งแวดล้อมกับ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-42-002",
+    "courseNameTH": "มหัศจรรย์แห่งบัว",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-42-003",
+    "courseNameTH": "ธรรมชาติของสรรพสิ่ง",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-42-004",
+    "courseNameTH": "คุณค่าของสัตว์เลี้ยง",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-43-001",
+    "courseNameTH": "การออกกาลังกายเพื่อสุขภาพ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "00-43-002",
+    "courseNameTH": "วิทยาศาสตร์การกีฬาเพื่อการออกกาลังกาย",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-101",
+    "courseNameTH": "คณิตศาสตร์ดิสครีต",
+    "courseNameEN": "Discrete Mathematics",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-102",
+    "courseNameTH": "คณิตศาสตร์และสถิติสำหรับเทคโนโลยีสารสนเทศ",
+    "courseNameEN": "Mathematics and Statistics for Information Technology",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-103",
+    "courseNameTH": "หลักพื้นฐานเทคโนโลยีสารสนเทศ",
+    "courseNameEN": "Information Technology Fundamentals",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-104",
+    "courseNameTH": "เทคโนโลยีแพลตฟอร์มคอมพิวเตอร์",
+    "courseNameEN": "Computing Platform Technology",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-105",
+    "courseNameTH": "เทคโนโลยีเว็บ",
+    "courseNameEN": "Web Technology",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-106",
+    "courseNameTH": "การเขียนโปรแกรมคอมพิวเตอร์ 1",
+    "courseNameEN": "Computer Programming 1",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-107",
+    "courseNameTH": "การเขียนโปรแกรมคอมพิวเตอร์ 2",
+    "courseNameEN": "Computer Programming 2",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-108",
+    "courseNameTH": "โครงสร้างข้อมูลและอัลกอริทึม",
+    "courseNameEN": "Data Structures and Algorithm",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-201",
+    "courseNameTH": "สถิติสำหรับเทคโนโลยีสารสนเทศ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-202",
+    "courseNameTH": "ภาษาอังกฤษสำหรับเทคโนโลยีสารสนเทศ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-203",
+    "courseNameTH": "การบริหารสารสนเทศ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-204",
+    "courseNameTH": "เทคโนโลยีเว็บ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-205",
+    "courseNameTH": "ระบบฐานข้อมูล",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-206",
+    "courseNameTH": "การวิเคราะห์และออกแบบระบบ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-207",
+    "courseNameTH": "ปฏิสัมพันธ์ระหว่างมนุษย์และคอมพิวเตอร์",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-208",
+    "courseNameTH": "การเขียนโปรแกรมเว็บ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-209",
+    "courseNameTH": "ภาษาอังกฤษสำหรับเทคโนโลยีสารสนเทศ",
+    "courseNameEN": "English for Information Technology",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-210",
+    "courseNameTH": "การบริหารสารสนเทศ",
+    "courseNameEN": "Information Management",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-211",
+    "courseNameTH": "การตลาดดิจิทัล",
+    "courseNameEN": "Digital Marketing",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-212",
+    "courseNameTH": "ระบบฐานข้อมูล",
+    "courseNameEN": "Database System",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-213",
+    "courseNameTH": "การวิเคราะห์และออกแบบระบบ",
+    "courseNameEN": "System Analysis and Design",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-214",
+    "courseNameTH": "การคิดเชิงออกแบบและ UX/UI",
+    "courseNameEN": "Design Thinking and UX/UI",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-215",
+    "courseNameTH": "การเขียนโปรแกรมเว็บ",
+    "courseNameEN": "Web Programming",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-216",
+    "courseNameTH": "เครือข่ายคอมพิวเตอร์ 1",
+    "courseNameEN": "Computer Network 1",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-217",
+    "courseNameTH": "เครือข่ายคอมพิวเตอร์ 2",
+    "courseNameEN": "Computer Network 2",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-218",
+    "courseNameTH": "ค่ายฝึกพัฒนาซอฟต์แวร์ 1(0-45-0)",
+    "courseNameEN": "Software Development Training Camp",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-301",
+    "courseNameTH": "ประเด็นทางสังคมและจริยธรรมสำหรับ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-302",
+    "courseNameTH": "ระบบสารสนเทศเพื่อการจัดการ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-303",
+    "courseNameTH": "การตลาดดิจิทัล",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-304",
+    "courseNameTH": "การบริหารบริการเทคโนโลยีสารสนเทศ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-305",
+    "courseNameTH": "สัมมนาเทคโนโลยีสารสนเทศ",
+    "courseNameEN": null,
+    "credits": 1,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-306",
+    "courseNameTH": "วิศวกรรมซอฟต์แวร์",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-307",
+    "courseNameTH": "การประกันและความมั่นคงสารสนเทศ 1",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-308",
+    "courseNameTH": "การเตรียมความพร้อมสหกิจศึกษา",
+    "courseNameEN": null,
+    "credits": 1,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-309",
+    "courseNameTH": "การเตรียมความพร้อมฝึกประสบการณ์",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-310",
+    "courseNameTH": "พาณิชย์อิเล็กทรอนิกส์",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-311",
+    "courseNameTH": "ระบบฐานข้อมูลชั้นสูง",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-312",
+    "courseNameTH": "การบริหารฐานข้อมูล",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-313",
+    "courseNameTH": "คลังข้อมูล",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-314",
+    "courseNameTH": "การทาเหมืองข้อมูล",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-315",
+    "courseNameTH": "อัจฉริยะทางธุรกิจ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-316",
+    "courseNameTH": "อินเทอร์เน็ตในทุกสรรพสิ่ง",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-317",
+    "courseNameTH": "การประกันและความมั่นคงสารสนเทศ 2",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-318",
+    "courseNameTH": "ระบบบริหารงานยูนิกซ์",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-319",
+    "courseNameTH": "ระบบสารสนเทศเพื่อการจัดการ",
+    "courseNameEN": "Management Information System",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-320",
+    "courseNameTH": "วิทยาการข้อมูลและการวิเคราะห์ข้อมูลมหัต",
+    "courseNameEN": "Data Science and Big Data Analytics",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-321",
+    "courseNameTH": "สัมมนาเทคโนโลยีสารสนเทศ",
+    "courseNameEN": "Information Technology Seminar",
+    "credits": 1,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-322",
+    "courseNameTH": "วิศวกรรมซอฟต์แวร์",
+    "courseNameEN": "Software Engineering",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-323",
+    "courseNameTH": "ความมั่นคงของระบบสารสนเทศจริยธรรมและกฎหมายไอที",
+    "courseNameEN": "Informa tion System Security, Ethics and IT Laws",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-324",
+    "courseNameTH": "สถาปัตยกรรมองค์กร",
+    "courseNameEN": "Enterprise Architecture",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-325",
+    "courseNameTH": "การบูรณาการระบบ",
+    "courseNameEN": "Systems Integration",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-326",
+    "courseNameTH": "พาณิชย์อิเล็กทรอนิกส์",
+    "courseNameEN": "Electronic Commerce",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-327",
+    "courseNameTH": "ระบบฐานข้อมูลชั้นสูง",
+    "courseNameEN": "Advance Database System",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-328",
+    "courseNameTH": "การบริหารฐานข้อมูล",
+    "courseNameEN": "Database Administrations",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-329",
+    "courseNameTH": "คลังข้อมูล",
+    "courseNameEN": "Data Warehouse",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-330",
+    "courseNameTH": "การทาเหมืองข้อมูล",
+    "courseNameEN": "Data Mining",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-331",
+    "courseNameTH": "การวิเคราะห์ข้อมูลและข่าวกรองธุรกิจ",
+    "courseNameEN": "Data Analytics and Business Intelligence",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-332",
+    "courseNameTH": "การเปลี่ยนผ่านสู่ดิจิทัล",
+    "courseNameEN": "Digital Transformation",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-333",
+    "courseNameTH": "อินเทอร์เน็ตของสรรพสิ่ง",
+    "courseNameEN": "Internet of Things",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-334",
+    "courseNameTH": "การประกันและความมั่นคงสารสนเทศ",
+    "courseNameEN": "Information Assurance and Secur ity",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-335",
+    "courseNameTH": "การสื่อสารแบบไร้สายและเคลื่อนที่",
+    "courseNameEN": "Wireless and Mobile Communication",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-336",
+    "courseNameTH": "การประมวลผลแบบคลาวด์",
+    "courseNameEN": "Cloud Computing",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-337",
+    "courseNameTH": "ความมั่นคงและภาวะส่วนตัวในการประมวลผลแบบคลาวด์",
+    "courseNameEN": "Security and Privacy in Cloud Computing",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-338",
+    "courseNameTH": "เครือข่ายคอมพิวเตอร์เชิงปฏิบัติการ",
+    "courseNameEN": "Computer Network Workshop",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-339",
+    "courseNameTH": "การพัฒนาโปรแกรมประยุกต์สำหรับอุปกรณ์เคลื่อนที่",
+    "courseNameEN": "Application Development for Mobile Devices",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-340",
+    "courseNameTH": "การพัฒนาโปรแกรมข้ามแพลตฟอร์ม",
+    "courseNameEN": "Cross-Platform Application Development",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-341",
+    "courseNameTH": "เทคโนโลยีเว็บเซอร์วิส",
+    "courseNameEN": "Web Service Technology",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-342",
+    "courseNameTH": "การจัดการโครงการเทคโนโลยีสารสนเทศ",
+    "courseNameEN": "Information Technology Project Management",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-343",
+    "courseNameTH": "การศึกษาเฉพาะเรื่องทางระบบฐานข้อมูล",
+    "courseNameEN": "Selected Topic in Database System",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-344",
+    "courseNameTH": "การศึกษาเฉพาะเรื่องทางเครือข่ายคอมพิวเตอร์",
+    "courseNameEN": "Selected Topic in Computer Network s",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-345",
+    "courseNameTH": "การศึกษาเฉพาะเรื่องทางเทคโนโลยีสารสนเทศ",
+    "courseNameEN": "Selected Topic in Information Technology",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-346",
+    "courseNameTH": "การเป็นผู้ประกอบการด้านเทคโนโลยีสารสนเทศ",
+    "courseNameEN": "Information Technology Entrepreneur",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-347",
+    "courseNameTH": "การเตรียมความพร้อมสหกิจศึกษา",
+    "courseNameEN": "Preparation for Co -operative Education",
+    "credits": 1,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-348",
+    "courseNameTH": "การเตรียมความพร้อมฝึกประสบการณ์วิชาชีพ",
+    "courseNameEN": "Preparation for Job Training",
+    "credits": 1,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-349",
+    "courseNameTH": "ฝึกประสบการณ์วิชาชีพทางด้านเทคโนโลยีสารสนเทศ 3(0-40-0)",
+    "courseNameEN": "Job Training in Information Techn ology",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-401",
+    "courseNameTH": "โครงงานเทคโนโลยีสารสนเทศ 6(0-18-6) 04-06-450 โครงงานเทคโนโลยีสารสนเทศ 6(0-18-6) คงเดิม",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-402",
+    "courseNameTH": "สหกิจศึกษาทางด้านเทคโนโลยีสารสนเทศ 6(0-40-0) 04-06-451 สหกิจศึกษาทางด้านเทคโนโลยี",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-403",
+    "courseNameTH": "ฝึกประสบการณ์วิชาชีพทางด้านเทคโนโลยี",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-404",
+    "courseNameTH": "ทักษะวิชาชีพทางด้านเทคโนโลยีสารสนเทศ",
+    "courseNameEN": null,
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-450",
+    "courseNameTH": "โครงงานเทคโนโลยีสารสนเทศ 6(0-18-6)",
+    "courseNameEN": "Information Technology Project",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-451",
+    "courseNameTH": "สหกิจศึกษาทางด้านเทคโนโลยีสารสนเทศ 6(0-40-0)",
+    "courseNameEN": "Co-operative Education in Informa tion Technology",
+    "credits": 3,
+    "creditDetail": null
+  },
+  {
+    "courseCode": "04-06-452",
+    "courseNameTH": "ทักษะวิชาชีพทางด้านเทคโนโลยีสารสนเทศ",
+    "courseNameEN": "Professional Skills in Information Technology",
+    "credits": 3,
+    "creditDetail": null
+  }
+]

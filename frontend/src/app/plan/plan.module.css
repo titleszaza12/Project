@@ -1,0 +1,660 @@
+.page{
+  padding: 16px;
+}
+.card{
+  background:#fff;
+  border:1px solid #d9e2ef;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(15,23,42,0.06);
+  overflow:hidden;
+}
+.cardHeader{
+  padding:18px 18px 12px 18px;
+  display:block;
+}
+
+/* NEW layout: single-column plan toolbar (clear + compact) */
+.planBar{
+  margin: 0 18px 10px 18px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.planBarRow{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:flex-end;
+}
+
+.planBarRow + .planBarRow{
+  margin-top:10px;
+  padding-top:10px;
+  border-top:1px dashed #e2e8f0;
+}
+
+.pillField{
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.pillLabel{
+  font-size:12px;
+  color:#475569;
+  margin: 0 0 6px 2px;
+  font-weight:700;
+}
+
+.pillControl{
+  width:100%;
+  height:40px;
+  padding:0 12px;
+  border:1px solid #d9e2ef;
+  border-radius:12px;
+  background:#fff;
+  color:#0f172a;
+  outline:none;
+}
+
+.pillControl:focus{
+  border-color:#fb923c;
+  box-shadow:0 0 0 3px rgba(251,146,60,0.25);
+}
+
+.planBarHint{
+  flex: 1 1 360px;
+  min-width: 260px;
+  align-self:center;
+  font-size:13px;
+  color:#334155;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  background:#fff;
+  border-radius:12px;
+}
+
+.planBarActions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:flex-end;
+}
+
+.h2{
+  font-size:20px;
+  font-weight:800;
+  color:#0f172a;
+}
+.sub{
+  margin-top:4px;
+  font-size:13px;
+  color:#64748b;
+}
+.filters{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:flex-end;
+  justify-content:flex-end;
+}
+
+/* ใช้ใน page.tsx: จัด layout control ให้ดูเป็นระเบียบ (ไม่กระจายมั่ว) */
+.controls{
+  width: 100%;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px 16px;
+  align-items:end;
+}
+
+
+.actions{
+  grid-column: 1 / -1;
+  display:flex;
+  gap:12px;
+  align-items:flex-end;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+}
+
+
+.primaryBtn{
+  height:38px;
+  padding:0 14px;
+  border-radius:10px;
+  border:1px solid #fb923c;
+  background:#fb923c;
+  color:#0f172a;
+  font-weight:800;
+  cursor:pointer;
+}
+.primaryBtn:disabled{
+  opacity:0.6;
+  cursor:not-allowed;
+}
+
+.secondaryBtn{
+  height:38px;
+  padding:0 14px;
+  border-radius:10px;
+  border:1px solid #e2e8f0;
+  background:#fff;
+  color:#0f172a;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.success{
+  margin:12px 18px 0 18px;
+  padding:10px 12px;
+  background:#f0fdf4;
+  border:1px solid #bbf7d0;
+  border-radius:10px;
+  color:#166534;
+  font-size:13px;
+}
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  min-width:0;
+}
+
+.label{
+  font-size:12px;
+  color:#475569;
+}
+.select{
+  height:38px;
+  padding:0 12px;
+  border:1px solid #d9e2ef;
+  border-radius:10px;
+  background:#fff;
+  color:#0f172a;
+  outline:none;
+}
+.select:focus{
+  border-color:#fb923c;
+  box-shadow:0 0 0 3px rgba(251,146,60,0.25);
+}
+
+.input{
+  height:38px;
+  padding:0 12px;
+  border:1px solid #d9e2ef;
+  border-radius:10px;
+  background:#fff;
+  color:#0f172a;
+  outline:none;
+}
+.input:focus{
+  border-color:#fb923c;
+  box-shadow:0 0 0 3px rgba(251,146,60,0.25);
+}
+.error{
+  margin:12px 18px 0 18px;
+  padding:10px 12px;
+  background:#fff7ed;
+  border:1px solid #fed7aa;
+  border-radius:10px;
+  color:#9a3412;
+  font-size:13px;
+}
+
+/* meta แสดง Track / ปีเทอม */
+.meta{
+  padding:12px 18px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.metaItem{ color:#0f172a; font-size:13px; }
+.metaKey{ color:#64748b; font-weight:700; margin-right:6px; }
+.metaRow{
+  padding:12px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.metaTitle{
+  font-weight:700;
+  color:#0f172a;
+}
+.metaSub{
+  margin-top:2px;
+  font-size:12px;
+  color:#64748b;
+}
+.metaRight{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:flex-end;
+}
+.badge{
+  background:#fff7ed;
+  border:1px solid #fed7aa;
+  color:#9a3412;
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:12px;
+}
+.badgeGhost{
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  color:#334155;
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:12px;
+}
+.tableWrap{
+  padding:0 18px 18px 18px;
+}
+.table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:14px;
+  overflow:hidden;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  table-layout: fixed;
+}
+
+/* ให้ dropdown ในตารางเต็มช่องและไม่ทำ layout กระตุก */
+.table .select{
+  width:100%;
+}
+
+.miniHint{
+  margin-top:6px;
+  font-size:12px;
+  color:#64748b;
+}
+.table thead th{
+  text-align:left;
+  padding:12px 12px;
+  background:#fff7ed;
+  border-bottom:1px solid #e2e8f0;
+  color:#0f172a;
+  font-size:13px;
+  font-weight:800;
+}
+.table tbody td{
+  padding:12px 12px;
+  border-bottom:1px solid #eef2f7;
+  color:#0f172a;
+  vertical-align:top;
+  overflow:hidden;
+}
+
+/* class names ที่ใช้ใน page.tsx */
+.code{ composes: codeCell; }
+.name{ min-width: 360px; }
+.group{ composes: groupCell; }
+.credits{ composes: creditsCell; }
+.note{ composes: noteCell; }
+.table tbody tr:nth-child(even) td{
+  background:#fbfdff;
+}
+.thGroup{ width:220px; }
+.thCode{ width:150px; }
+.thName{ width:auto; }
+.thCredits{ width:90px; text-align:right;}
+.thNote{ width:180px;}
+.creditsCell{ text-align:right; font-weight:700;}
+.codeCell{ font-weight:800; letter-spacing:0.2px;}
+.groupCell{ color:#334155; }
+.noteCell{ color:#64748b; font-size:13px;}
+
+/* กันตารางขยับ + ทำให้ text ดูเรียบร้อย */
+.codeCell, .groupCell, .noteCell{ white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+.empty{
+  text-align:center;
+  padding:18px !important;
+  color:#64748b;
+}
+.slots{
+  padding:0 18px 18px 18px;
+}
+.slotsTitle{
+  font-weight:800;
+  color:#0f172a;
+  margin:4px 0 10px 0;
+}
+.slotsGrid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:10px;
+}
+.slotCard{
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:12px;
+  background:#fff;
+}
+.slotTop{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:flex-start;
+}
+.slotTitle{
+  font-weight:800;
+  color:#0f172a;
+}
+.slotBadge{
+  font-size:12px;
+  font-weight:700;
+  color:#9a3412;
+  background:#fff7ed;
+  border:1px solid #fed7aa;
+  border-radius:999px;
+  padding:4px 8px;
+  white-space:nowrap;
+}
+.slotSub{
+  margin-top:6px;
+  font-size:12px;
+  color:#64748b;
+}
+@media (max-width: 900px){
+  .field{ min-width:140px; }
+  .slotsGrid{ grid-template-columns:1fr; }
+  .thGroup{ width:160px; }
+}
+
+/* ====== UI TUNE v3: show full text + clear left/right layout ====== */
+
+/* 1) Controls: split left/right for readability */
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 22px;
+  align-items: end;
+}
+
+/* left column: track + plan select */
+.controls .leftCol, .controlsLeft {
+  grid-column: 1 / 2;
+}
+
+/* right column: plan name + action + year/term */
+.controls .rightCol, .controlsRight {
+  grid-column: 2 / 3;
+}
+
+/* make action row neat */
+.actionsRow, .actions, .planActions {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* 2) Table: show full text (no ellipsis) */
+.tableWrap, .tableContainer, .tableCard {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  table-layout: auto !important; /* allow columns to grow with content */
+}
+
+/* Allow wrapping in text columns */
+.table td, .table th {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+/* Give sensible minimums so it stays readable */
+.thCode, .tdCode { min-width: 120px; }
+.thPick, .tdPick { min-width: 520px; }
+.thGroup, .tdGroup { min-width: 280px; }
+.thCredits, .tdCredits { min-width: 80px; text-align: center; }
+.thNote, .tdNote { min-width: 120px; }
+
+/* Dropdown: full width but not insane */
+.selectCell select, select.select, .courseSelect {
+  width: 100%;
+  min-width: 420px;
+}
+
+/* 3) Responsive: on small screens stack controls */
+@media (max-width: 980px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+  .controls .leftCol, .controlsLeft,
+  .controls .rightCol, .controlsRight {
+    grid-column: 1 / -1;
+  }
+}
+
+/* --- layout + table readability overrides --- */
+.table{
+  table-layout: auto;
+}
+.table th, .table td{
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  vertical-align: top;
+}
+.colCode{ width: 120px; }
+.colSelect{ width: 520px; }
+.colGroup{ width: 320px; }
+.colCredits{ width: 80px; text-align:center; }
+.colNote{ width: 120px; }
+.select{ width:100%; }
+@media (max-width: 1100px){
+  .cardHeader{ grid-template-columns: 1fr; }
+  .controls{ grid-template-columns: 1fr; }
+}
+
+/* ===== Control Panel polish (v1) ===== */
+.headerGrid{
+  display:grid;
+  grid-template-columns: 1fr 640px;
+  gap: 28px;
+  align-items:start;
+}
+
+/* Left: title + subtitle */
+.headerLeft .title{ margin:0; font-size:22px; font-weight:700; letter-spacing:-0.2px; }
+.headerLeft .subtitle{ margin:6px 0 0; color:#6b7280; font-size:14px; line-height:1.45; }
+
+/* Right: compact panel */
+.headerRight{
+  display:grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fff;
+}
+
+/* Field rows */
+.fieldRow{ display:grid; gap:6px; }
+.label{ font-size:12px; color:#6b7280; }
+.control input, .control select{
+  width:100%;
+  height: 36px;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+/* Two columns inside panel */
+.twoCols{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Action row: name + button aligned */
+.actionsRow{
+  display:flex;
+  gap: 12px;
+  align-items:end;
+  flex-wrap: wrap;
+}
+
+.primaryBtn{
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Helper text: keep it readable and not too wide */
+.helperText{
+  font-size: 12px;
+  color:#6b7280;
+  line-height:1.35;
+  margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 1100px){
+  .headerGrid{ grid-template-columns: 1fr; }
+  .twoCols{ grid-template-columns: 1fr; }
+  .headerRight{ padding: 12px; }
+}
+
+/* ===== Plan Controls Layout Fix (v3) ===== */
+.cardHeader{
+  display:grid;
+  grid-template-columns: 1fr 680px;
+  gap: 28px;
+  align-items:start;
+}
+.controls{
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px;
+  background: #fff;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
+  gap: 12px 18px;
+  align-items:end;
+}
+.actions{
+  grid-column: 1 / -1; /* bottom row spans both columns */
+  display:flex;
+  gap: 12px;
+  align-items:end;
+  flex-wrap: wrap;
+}
+.label{
+  font-size: 12px;
+  color: #6b7280;
+}
+.field{
+  display:grid;
+  gap: 6px;
+}
+.select, .input{
+  width:100%;
+  height:36px;
+  padding: 6px 10px;
+  border: 1px solid #dbe2ef;
+  border-radius: 10px;
+  background:#fff;
+}
+.primaryBtn{
+  height:36px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.secondaryBtn{
+  height:36px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #dbe2ef;
+  background:#fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.miniHint{
+  font-size: 12px;
+  color:#6b7280;
+  margin-top: 4px;
+  line-height: 1.35;
+}
+@media (max-width: 1100px){
+  .cardHeader{ grid-template-columns: 1fr; }
+  .controls{ grid-template-columns: 1fr; }
+  .actions{ grid-column: 1 / -1; }
+}
+
+/* ===== Modal: Overwrite term (409) ===== */
+.modalOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 9999;
+}
+
+.modalCard{
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 20px 50px rgba(15,23,42,0.25);
+}
+
+.modalTitle{
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.modalBody{
+  font-size: 14px;
+  line-height: 1.55;
+  color: #334155;
+  margin-bottom: 14px;
+}
+
+.modalActions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.dangerBtn{
+  height:36px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: none;
+  background: #ef4444;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.dangerBtn:disabled{
+  opacity: 0.7;
+  cursor: not-allowed;
+}
